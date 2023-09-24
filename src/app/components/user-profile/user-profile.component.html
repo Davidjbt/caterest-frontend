@@ -1,0 +1,14 @@
+<section class="profile-header">
+    <img [src]="'http://localhost:8080/user/' + userProfileDetails.id + '/profilePicture'" alt="Profile">
+    <p [textContent]="userProfileDetails.displayName" id="username"></p>
+    <p [textContent]="userProfileDetails.biography" id="user-biography"></p>
+</section>
+
+<section class="profile-gallery">
+    <div class="profile-picture" *ngFor="let picture of userProfileDetails.pictures">
+        <a [routerLink]="['/image', picture.id]">
+          <img [src]="'http://localhost:8080/picture/render/' + picture.id" alt="picture">
+        </a>
+    </div>
+    <div *ngIf="userProfileDetails.pictures.length === 0">No Images</div>
+</section>

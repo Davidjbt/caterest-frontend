@@ -1,0 +1,51 @@
+<div class="login-dialog-overlay">
+    <div class="login-dialog">
+        <h2>Register</h2>
+        <button mat-icon-button class="close-button" (click)="closeDialog()">
+            <mat-icon aria-label="Close">close</mat-icon>
+        </button>
+        <form id="signup-form" (ngSubmit)="register()">
+            <p>
+                <input type="text" id="username" name="username" placeholder="Username" required [(ngModel)]="userRegisterDto.username">
+            </p>
+            <p>
+                <input type="email" id="email" name="email" placeholder="Email" required [(ngModel)]="userRegisterDto.email">
+            </p>
+            <p>
+                <input type="password" id="password" name="password" placeholder="Password" required [(ngModel)]="userRegisterDto.password">
+            </p>
+            <p>
+                <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm Password" required [(ngModel)]="confirmPassword">
+            </p>
+            
+            <div class="picture-container">
+                <div class="picture-preview">
+                  <div class="square-container">
+                    <img [src]="profilePicture" alt="Profile Picture">
+                  </div>
+                </div>
+                <!-- Hide the original input element -->
+                <input type="file" id="picture" name="picture" accept="image/*" (change)="onPictureChange($event)" style="display: none;">
+                <!-- Use a label for the custom "Choose File" button with only the pencil icon -->
+                <label for="picture" class="file-upload-label">
+                  <i class="fa fa-pencil"></i>
+                </label>
+
+                <label for="delete-picture" class="delete-button-label" (click)="onDeletePicture()">
+                    <i class="fa fa-trash"></i>
+                </label>
+            </div>
+    
+            <p>
+                <textarea id="biography" name="biography" placeholder="Biography" [(ngModel)]="userRegisterDto.biography" rows="4" #biographyTextarea></textarea>
+            </p>
+            <p>
+                <input type="submit" id="signup" value="Sign Up">
+            </p>
+        </form>
+        <div id="create-account-wrap">
+            <p>Already a member? <a href="#">Log In</a></p>
+        </div>
+    </div>
+</div>
+

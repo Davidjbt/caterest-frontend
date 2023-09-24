@@ -1,0 +1,35 @@
+<div class="post-picture-dialog-overlay">
+  <div class="post-picture-dialog">
+    <h2>Post picture</h2>
+    <button mat-icon-button class="close-button" (click)="closeDialog()">
+      <mat-icon aria-label="Close">close</mat-icon>
+    </button>
+    <form id="post-picture-form" (ngSubmit)="postPicture()">
+      <div class="picture-container">
+        <div class="picture-preview">
+          <div class="square-container">
+            <img [src]="picture" alt="Profile Picture">
+          </div>
+        </div>
+        <!-- Hide the original input element -->
+        <input type="file" id="picture" name="picture" accept="image/*" (change)="onPictureChange($event)" style="display: none;">
+        <!-- Use a label for the custom "Choose File" button with only the pencil icon -->
+        <label for="picture" class="file-upload-label">
+          <i class="fa fa-pencil"></i>
+        </label>
+
+        <label for="delete-picture" class="delete-button-label" (click)="onDeletePicture()">
+          <i class="fa fa-trash"></i>
+        </label>
+      </div>
+
+      <p>
+        <textarea id="biography" name="biography" placeholder="Description" [(ngModel)]="picturePostDto.description" rows="4" #biographyTextarea></textarea>
+      </p>
+      <p>
+        <input type="submit" id="post" value="Post">
+      </p>
+    </form>
+  </div>
+</div>
+
