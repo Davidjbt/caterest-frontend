@@ -3,7 +3,7 @@
     <div class="nav-links" id="navLinks">
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
-            <li><a [routerLink]="['']">HOME</a></li>
+            <li *ngIf="!(currentRoute == '/' )"><a [routerLink]="['']">HOME</a></li>
             <li *ngIf="!loggedIn"><a (click)="openRegisterDialog()">REGISTER</a></li>
             <li *ngIf="!loggedIn"><a (click)="openLoginDialog()">LOG IN</a></li>
             <li *ngIf="loggedIn"><a (click)="openPostPictureDialog()">POST PICTURE</a></li>

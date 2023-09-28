@@ -5,6 +5,7 @@ import {LoginDialogComponent} from "../login-dialog/login-dialog.component";
 import {AuthService} from "../../services/auth.service";
 import {AuthenticatedUser} from "../../interface/authenticated-user";
 import {PostPictureDialogComponent} from "../post-picture-dialog/post-picture-dialog.component";
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
     selector: 'app-navbar',
@@ -14,10 +15,12 @@ import {PostPictureDialogComponent} from "../post-picture-dialog/post-picture-di
 export class NavbarComponent implements OnInit {
 
     loggedIn: AuthenticatedUser | null = null;
+    currentRoute: string = '';
 
     constructor(
       private dialog: MatDialog,
-      private authService: AuthService
+      private authService: AuthService,
+      private router: Router
     ) { }
 
     ngOnInit(): void {
@@ -30,6 +33,14 @@ export class NavbarComponent implements OnInit {
         if (user)
           this.loggedIn = JSON.parse(user);
       }
+
+      this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd)
+          this.currentRoute = event.url;
+          console.log(this.currentRoute);
+      })
+
+
     }
 
     openLoginDialog() {
