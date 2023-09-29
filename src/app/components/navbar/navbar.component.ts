@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
       this.router.events.subscribe((event) => {
         if (event instanceof NavigationEnd)
           this.currentRoute = event.url;
-          console.log(this.currentRoute);
+          // console.log(this.currentRoute);
       })
 
 
