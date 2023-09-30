@@ -95,7 +95,8 @@ nav img {
     transition: 1s;
 }
 
-nav .fa {
+nav .fa-bars,
+nav .fa-times {
     display: none;
 }
 
