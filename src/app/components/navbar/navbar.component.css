@@ -1,3 +1,29 @@
 h1{
     color: red;
 }
+
+/* Style the user dropdown menu */
+.user-dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  right: 0; /* Align the menu to the right */
+}
+
+.user-dropdown ul li {
+  margin: 5px 0;
+  /*color: #000; !* Set text color to black *!*/
+}
+
+.user-dropdown .dp {
+  text-decoration: none; /* Remove underlines from links */
+  color: #000; /* Set link color to black */
+}
+
+.user-dropdown:hover ul {
+  display: block;
+}

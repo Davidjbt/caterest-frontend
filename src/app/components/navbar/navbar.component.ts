@@ -61,4 +61,16 @@ export class NavbarComponent implements OnInit {
       })
     }
 
+    showUserMenu: boolean = false;
+    toggleUserMenu(): void {
+      this.showUserMenu = !this.showUserMenu;
+    }
+
+    // Function to handle logout
+    logout(): void {
+      // Implement your logout logic here
+      // For example, clear user data and redirect to the login page
+      // You can also add a redirection to the login page here
+    }
+
 }

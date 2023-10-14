@@ -7,11 +7,15 @@
             <li *ngIf="!loggedIn"><a (click)="openRegisterDialog()">REGISTER</a></li>
             <li *ngIf="!loggedIn"><a (click)="openLoginDialog()">LOG IN</a></li>
             <li *ngIf="loggedIn"><a (click)="openPostPictureDialog()">POST PICTURE</a></li>
-            <li *ngIf="loggedIn">
-              <a>
-                <i class="fa fa-user-o" aria-hidden="true"></i> <!-- Font Awesome user icon -->
-              </a>
-            </li>
+              <li *ngIf="loggedIn" class="user-dropdown">
+                <a (click)="toggleUserMenu()">
+                  <i class="fa fa-user-o" aria-hidden="true"></i> <!-- Font Awesome user icon -->
+                </a>
+                <ul *ngIf="showUserMenu">
+                  <li><a class="dp" [routerLink]="['', loggedIn.username]">My Profile</a></li>
+                  <li><a class="dp" (click)="logout()">Logout</a></li>
+                </ul>
+              </li>
         </ul>
     </div>
     <i class="fa fa-bars" onclick="showMenu()"></i>
