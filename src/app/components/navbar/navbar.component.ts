@@ -61,9 +61,9 @@ export class NavbarComponent implements OnInit {
       })
     }
 
-    showUserMenu: boolean = false;
+    showUseDropdown: boolean = false;
     toggleUserMenu(): void {
-      this.showUserMenu = !this.showUserMenu;
+      this.showUseDropdown = !this.showUseDropdown;
     }
 
     // Function to handle logout

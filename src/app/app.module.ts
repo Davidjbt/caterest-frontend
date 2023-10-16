@@ -16,6 +16,7 @@ import {RegisterDialogComponent} from './components/register-dialog/register-dia
 import {PostComponent} from './components/post/post.component';
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
 import {PostPictureDialogComponent} from './components/post-picture-dialog/post-picture-dialog.component';
+import {UserDropdownComponent} from './components/user-dropdown/user-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {PostPictureDialogComponent} from './components/post-picture-dialog/post-
     RegisterDialogComponent,
     PostComponent,
     UserProfileComponent,
-    PostPictureDialogComponent
+    PostPictureDialogComponent,
+    UserDropdownComponent
   ],
   imports: [
     BrowserModule,
