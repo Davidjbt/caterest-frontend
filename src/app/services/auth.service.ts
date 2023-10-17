@@ -68,7 +68,12 @@ export class AuthService {
     return this.http.post<any>(`${this.apiUrl}/register`, formData);
   }
 
-  logout() {
+  logOut(): Observable<any> {
+    console.log('now here')
+    return this.http.post<any>(`${this.apiUrl}/logOut`,null, {withCredentials: true})
+  }
+
+  logOutBySessionExpired() {
     console.log('here')
     this.loggedInSubject.next(null);
     this.cookieService.delete('token-expiration');
@@ -84,7 +89,7 @@ export class AuthService {
       const currentTime = Date.now();
       if (currentTime >= expirationTime) {
         console.log('Expired')
-        this.logout();
+        this.logOutBySessionExpired();
       }
     }
 

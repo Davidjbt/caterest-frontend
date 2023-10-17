@@ -11,14 +11,12 @@ export class UserDropdownComponent {
   user: string | null = sessionStorage.getItem('user')
   username : string = this.user? JSON.parse(this.user).username : null;
 
-  constructor(authService: AuthService) {
-  }
+  constructor(private authService: AuthService) { }
 
   // Function to handle logout
   logout(): void {
-    // Implement your logout logic here
-    // For example, clear user data and redirect to the login page
-    // You can also add a redirection to the login page here
+    console.log('here')
+    this.authService.logOut();
   }
 
 }
