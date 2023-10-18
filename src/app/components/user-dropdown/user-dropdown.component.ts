@@ -16,7 +16,7 @@ export class UserDropdownComponent {
   // Function to handle logout
   logout(): void {
     console.log('here')
-    this.authService.logOut();
+    this.authService.logOut().subscribe();
   }
 
 }

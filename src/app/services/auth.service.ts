@@ -70,7 +70,11 @@ export class AuthService {
 
   logOut(): Observable<any> {
     console.log('now here')
-    return this.http.post<any>(`${this.apiUrl}/logOut`,null, {withCredentials: true})
+    this.loggedInSubject.next(null);
+    this.cookieService.delete('token-expiration');
+    clearInterval(this.checkTokenExpirationInterval);
+    sessionStorage.removeItem('user');
+    return this.http.post<any>(`${this.apiUrl}/logOut`, null, {withCredentials: true,})
   }
 
   logOutBySessionExpired() {
