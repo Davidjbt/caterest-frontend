@@ -423,3 +423,8 @@ border-radius: 0 0 4px 4px;
 .delete-button-label:hover {
     background-color: #ff7f70; /* Change background color on hover */
 }
+
+.login-link {
+  text-decoration: underline;
+  cursor: pointer;
+}

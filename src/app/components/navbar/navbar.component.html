@@ -12,8 +12,6 @@
                   <i class="fa fa-user-o" aria-hidden="true"></i> <!-- Font Awesome user icon -->
                 </a>
                 <ul *ngIf="showUseDropdown">
-<!--                  <li><a class="dp" [routerLink]="['', loggedIn.username]">My Profile</a></li>-->
-<!--                  <li><a class="dp" (click)="logout()">Logout</a></li>-->
                   <app-user-dropdown></app-user-dropdown>
                 </ul>
               </li>

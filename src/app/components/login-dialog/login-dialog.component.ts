@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {MatDialogRef} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {UserLoginDto} from 'src/app/interface/user-login-dto';
 import {AuthService} from "../../services/auth.service";
+import {RegisterDialogComponent} from "../register-dialog/register-dialog.component";
 
 @Component({
   selector: 'app-login-dialog',
@@ -17,6 +18,7 @@ export class LoginDialogComponent {
 
   constructor(
     private dialogRef: MatDialogRef<LoginDialogComponent>,
+    private dialog: MatDialog,
     private authService: AuthService
   ) { }
 
@@ -33,6 +35,13 @@ export class LoginDialogComponent {
 
   closeDialog(): void {
     this.dialogRef.close();
+  }
+
+  openRegisterDialog(): void {
+    this.dialogRef.close();
+    this.dialog.open(RegisterDialogComponent, {
+      'width': '400px'
+    });
   }
 
 }

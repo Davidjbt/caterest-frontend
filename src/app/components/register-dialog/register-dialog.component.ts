@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {MatDialogRef} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {UserRegisterDto} from '../../interface/user-register-dto';
 import {AuthService} from "../../services/auth.service";
+import {LoginDialogComponent} from "../login-dialog/login-dialog.component";
 
 @Component({
   selector: 'app-register-dialog',
@@ -18,12 +19,12 @@ export class RegisterDialogComponent {
   }
 
   selectedProfilePicture: File | null = null;
-
   confirmPassword: String = '';
 
   constructor(
     private dialogRef: MatDialogRef<RegisterDialogComponent>,
-    private authService: AuthService
+    private dialog: MatDialog,
+    private authService: AuthService,
   ) { }
 
   register() {
@@ -58,6 +59,13 @@ export class RegisterDialogComponent {
 
   closeDialog(): void {
     this.dialogRef.close();
+  }
+
+  openLoginDialog(): void {
+    this.dialogRef.close();
+    this.dialog.open(LoginDialogComponent, {
+      'width': '400pxs'
+    })
   }
 
 }

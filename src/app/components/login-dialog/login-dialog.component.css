@@ -4,7 +4,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #2b3e51;
 }
-  
+
 h2 {
 font-weight: 300;
 text-align: center;
@@ -13,7 +13,7 @@ text-align: center;
 p {
 position: relative;
 }
-  
+
 a,
 a:link,
 a:visited,
@@ -147,7 +147,7 @@ input[type="submit"]:hover {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-  
+
 #create-account-wrap {
 background-color: #eeedf1;
 color: #8a8b8e;
@@ -167,7 +167,7 @@ border-radius: 0 0 4px 4px;
     background-color: rgb(202, 31, 31); /* Transparent gray background */
     z-index: 999; /* Ensure the overlay is on top of other elements */
 }
-  
+
 
 /* Add this to your component-specific CSS or global styles */
 .close-button {
@@ -180,10 +180,10 @@ border-radius: 0 0 4px 4px;
     color: #000; /* Change the color as needed */
     cursor: pointer;
 }
-  
+
 .close-button:focus {
     outline: none; /* Remove the focus outline if needed */
-}  
+}
 
 .login-dialog-overlay {
     position: fixed;
@@ -197,7 +197,7 @@ border-radius: 0 0 4px 4px;
     align-items: center;
     z-index: 999;
   }
-  
+
   .login-dialog {
     background-color: #fff;
     width: 35%;
@@ -207,7 +207,7 @@ border-radius: 0 0 4px 4px;
     box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
     position: relative; /* Add this to create a positioning context */
   }
-  
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -218,7 +218,7 @@ border-radius: 0 0 4px 4px;
     border: 1px solid #c2c0ca; /* Add this to set a custom border style */
     font-weight: normal; /* Remove bold font-weight */
 }
-  
+
 #login-form input[type="text"],
 #login-form input[type="password"] {
   width: 100%;
@@ -234,4 +234,9 @@ border-radius: 0 0 4px 4px;
   position: relative;
   display: inline-block;
   background: none;
+}
+
+.register-link {
+  text-decoration: underline;
+  cursor: pointer;
 }
