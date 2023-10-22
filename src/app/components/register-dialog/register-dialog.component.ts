@@ -27,19 +27,22 @@ export class RegisterDialogComponent {
     private authService: AuthService,
   ) { }
 
-  register() {
+  register(): void {
     this.authService.register(this.userRegisterDto, this.selectedProfilePicture).subscribe(
-      (response) => {
-        console.log('Registration successful:', response);
-      },
-      (error) => {
-        console.error('Registration failed:', error);
+      {
+        next: response => {
+          console.log('Registration successful:', response);
+          this.dialogRef.close();
+        },
+        error: error => {
+          console.error('Registration failed:', error);
+        }
       }
     );
   }
 
   profilePicture: string = '../../assets/images/placeholder-profile.png';
-  onPictureChange(event: any) {
+  onPictureChange(event: any): void {
     const fileInput = event.target;
     if (fileInput.files && fileInput.files[0]) {
       this.selectedProfilePicture = fileInput.files[0]
@@ -52,7 +55,7 @@ export class RegisterDialogComponent {
     }
   }
 
-  onDeletePicture() {
+  onDeletePicture(): void {
     this.profilePicture = '../../assets/images/placeholder-profile.png';
     this.selectedProfilePicture = null
   }
