@@ -65,7 +65,14 @@ export class AuthService {
       formData.append('inpFile', profilePicture);
     console.log(formData);
 
-    return this.http.post<any>(`${this.apiUrl}/register`, formData);
+    return this.http.post<any>(`${this.apiUrl}/register`, formData)
+      .pipe(
+        tap(response => {
+          this.loggedInSubject.next(response);
+          sessionStorage.setItem('user', JSON.stringify(response));
+          this.checkTokenExpirationInterval = setInterval(() => this.checkTokenExpiration(), 2000);
+        })
+      )
   }
 
   logOut(): Observable<any> {
