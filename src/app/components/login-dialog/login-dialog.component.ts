@@ -24,12 +24,16 @@ export class LoginDialogComponent {
 
   login() {
    this.authService.login(this.userLoginDto).subscribe(
-    (response) => {
-      console.log('Login Successful', response);
-      this.dialogRef.close();
+     {
+       next: response => {
+         console.log('Login Successful', response);
+         this.dialogRef.close();
 
-    },
-    (error) => { console.error('Login Error', error) }
+       },
+       error: error => {
+         console.error('Login Error', error)
+       }
+     }
    )
   }
 
