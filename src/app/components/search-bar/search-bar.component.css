@@ -1,0 +1,98 @@
+/*.nav-search {*/
+/*  flex-grow: 1; !* Expand to fill available space between logo and icons *!*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  margin: 0 50px; !* Adjust the margin to control the spacing *!*/
+/*}*/
+
+/*.nav-search input {*/
+/*  !* Add styling for the input element *!*/
+/*  padding: 5px; !* Adjust the padding to control the input size *!*/
+/*  border: 0px solid #ccc; !* Add a border if needed *!*/
+/*}*/
+
+/*.nav-search button {*/
+/*  !* Add styling for the search button *!*/
+/*  padding: 5px 10px; !* Adjust the padding to control the button size *!*/
+/*  background-color: #007bff; !* Customize the button's background color *!*/
+/*  color: #fff; !* Set text color to white *!*/
+/*  border: none; !* Remove the button border *!*/
+/*  cursor: pointer; !* Change cursor to pointer on hover *!*/
+/*}*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*html,*/
+/*body {*/
+/*  display: grid;*/
+/*  height: 100%;*/
+/*  place-items: center;*/
+/*  background: #664AFF;*/
+/*}*/
+
+::selection {
+  color: #fff;
+  background: #664AFF;
+}
+
+.nav-search {
+  position: relative;
+  height: 60px;
+  width: 350px;
+  border-radius: 50%;
+  /*box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);*/
+  /*transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+  margin-top: -15px;
+}
+
+.nav-search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-search input::placeholder {
+  color: #a6a6a6;
+}
+
+.nav-search .search-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  background: #f44336;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/*.nav-search .search-data {*/
+/*  text-align: center;*/
+/*  padding-top: 7px;*/
+/*  color: #fff;*/
+/*  font-size: 18px;*/
+/*  word-wrap: break-word;*/
+/*}*/
+
+/*.nav-search .search-data.active {*/
+/*  display: none;*/
+/*}*/

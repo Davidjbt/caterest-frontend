@@ -17,6 +17,7 @@ import {PostComponent} from './components/post/post.component';
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
 import {PostPictureDialogComponent} from './components/post-picture-dialog/post-picture-dialog.component';
 import {UserDropdownComponent} from './components/user-dropdown/user-dropdown.component';
+import {SearchBarComponent} from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {UserDropdownComponent} from './components/user-dropdown/user-dropdown.co
     PostComponent,
     UserProfileComponent,
     PostPictureDialogComponent,
-    UserDropdownComponent
+    UserDropdownComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
