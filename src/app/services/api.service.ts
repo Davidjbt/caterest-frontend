@@ -43,4 +43,8 @@ export class ApiService {
 
     return this.http.post<any>(`${this.apiUrl}/picture/post`, formData, options);
   }
+
+  getMatchingUser(query: string): Observable<any> {
+    return this.http.get(query);
+  }
 }
