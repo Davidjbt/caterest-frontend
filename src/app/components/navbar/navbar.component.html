@@ -10,7 +10,7 @@
             <li *ngIf="loggedIn"><a (click)="openPostPictureDialog()">POST PICTURE</a></li>
               <li *ngIf="loggedIn" class="user-dropdown">
                 <a (click)="toggleUserMenu()">
-                  <i class="fa fa-user-o" aria-hidden="true"></i> <!-- Font Awesome user icon -->
+                  <fa-icon [icon]="faUser"></fa-icon> <!-- Font Awesome user icon -->
                 </a>
                 <ul *ngIf="showUseDropdown">
                   <app-user-dropdown></app-user-dropdown>

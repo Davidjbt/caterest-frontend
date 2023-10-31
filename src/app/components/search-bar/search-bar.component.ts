@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ApiService} from "../../services/api.service";
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-search-bar',
@@ -8,6 +9,7 @@ import {ApiService} from "../../services/api.service";
 })
 export class SearchBarComponent {
 
+  faSearch = faSearch
   query: string = ''
 
   constructor(private apiService: ApiService) { }

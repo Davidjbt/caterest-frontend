@@ -17,7 +17,7 @@
 /*  background-color: #007bff; !* Customize the button's background color *!*/
 /*  color: #fff; !* Set text color to white *!*/
 /*  border: none; !* Remove the button border *!*/
-/*  cursor: pointer; !* Change cursor to pointer on hover *!*/
+/*  cursor: pointer; !* Change cursor to pointer on hover *!* /
 /*}*/
 
 * {
@@ -82,8 +82,17 @@
   color: #fff;
   cursor: pointer;
   z-index: 1;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+.nav-search .search-icon:hover {
+  background: rgba(244, 67, 54, 0.67);
+  color: #fff;
+}
+
+/*.nav-search .search-icon:active {*/
+/*  background: #f44336;
+/*  color: #fff;
+/*}*/
 
 /*.nav-search .search-data {*/
 /*  text-align: center;*/

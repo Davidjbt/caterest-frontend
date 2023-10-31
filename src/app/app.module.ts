@@ -18,6 +18,7 @@ import {UserProfileComponent} from './components/user-profile/user-profile.compo
 import {PostPictureDialogComponent} from './components/post-picture-dialog/post-picture-dialog.component';
 import {UserDropdownComponent} from './components/user-dropdown/user-dropdown.component';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {SearchBarComponent} from './components/search-bar/search-bar.component';
     MatDialogModule,
     FormsModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

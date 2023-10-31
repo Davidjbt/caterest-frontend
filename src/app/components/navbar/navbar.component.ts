@@ -6,6 +6,7 @@ import {AuthService} from "../../services/auth.service";
 import {AuthenticatedUser} from "../../interface/authenticated-user";
 import {PostPictureDialogComponent} from "../post-picture-dialog/post-picture-dialog.component";
 import {NavigationEnd, Router} from "@angular/router";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: 'app-navbar',
@@ -14,6 +15,7 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
 
+    faUser = faUser
     loggedIn: AuthenticatedUser | null = null;
     currentRoute: string = '';
 
