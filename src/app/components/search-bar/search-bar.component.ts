@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {ApiService} from "../../services/api.service";
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-search-bar',
@@ -12,12 +12,14 @@ export class SearchBarComponent {
   faSearch = faSearch
   query: string = ''
 
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router) { }
 
-  search(): void {
-      if (this.query.length != 0) {
-        this.apiService.getMatchingUser(this.query);
-      }
+  performSearch(): void {
+     if (this.query) {
+       this.router.navigate(['/results'], {queryParams: {query: this.query}})
+     }
   }
+
+
 
 }

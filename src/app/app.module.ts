@@ -19,6 +19,7 @@ import {PostPictureDialogComponent} from './components/post-picture-dialog/post-
 import {UserDropdownComponent} from './components/user-dropdown/user-dropdown.component';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {ResultsComponent} from './components/results/results.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     UserProfileComponent,
     PostPictureDialogComponent,
     UserDropdownComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
