@@ -1,0 +1,29 @@
+/* results.component.css */
+.result-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the result boxes horizontally */
+}
+
+.result-container {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60%; /* Adjust the width as needed */
+}
+
+.result-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden;
+}
+
+.result-username {
+  font-weight: bold;
+}

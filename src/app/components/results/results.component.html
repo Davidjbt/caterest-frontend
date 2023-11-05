@@ -1,1 +1,6 @@
-<p>results works!</p>
+<div *ngIf="results.length > 0" class="result-list">
+  <div *ngFor="let result of results" class="result-container">
+    <a [routerLink]="['', result.displayName]"><img [src]="'http://localhost:8080/user/' + result.id + '/profilePicture'" alt="" class="result-image"></a>
+    <div class="result-username">{{ result.displayName }}</div>
+  </div>
+</div>
