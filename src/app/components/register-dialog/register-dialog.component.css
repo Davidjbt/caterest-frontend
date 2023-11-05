@@ -6,21 +6,21 @@ body {
 }
 
 h2 {
-font-weight: 300;
-text-align: center;
+    font-weight: 300;
+    text-align: center;
 }
 
 p {
-position: relative;
+    position: relative;
 }
 
 a,
 a:link,
 a:visited,
 a:active {
-color: #3ca9e2;
--webkit-transition: all 0.2s ease;
-transition: all 0.2s ease;
+    color: #3ca9e2;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 a:focus, a:hover,
@@ -30,146 +30,142 @@ a:visited:focus,
 a:visited:hover,
 a:active:focus,
 a:active:hover {
-color: #329dd5;
--webkit-transition: all 0.2s ease;
-transition: all 0.2s ease;
+    color: #329dd5;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 #login-form-wrap {
-background-color: #fff;
-width: 35%;
-margin: 30px auto;
-text-align: center;
-padding: 20px 0 0 0;
-border-radius: 4px;
-box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    width: 35%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px 0 0 0;
+    border-radius: 4px;
+    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
 }
 
 #login-form {
-padding: 0 60px;
+    padding: 0 60px;
 }
 
 input {
-display: block;
-box-sizing: border-box;
-width: 100%;
-outline: none;
-height: 60px;
-line-height: 60px;
-border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 4px;
 }
 
 input[type="text"],
 input[type="email"] {
-width: 100%;
-padding: 0 0 0 10px;
-margin: 0;
-color: #8a8b8e;
-border: 1px solid #c2c0ca;
-font-style: normal;
-font-size: 16px;
--webkit-appearance: none;
+    width: 100%;
+    padding: 0 0 0 10px;
+    margin: 0;
+    color: #8a8b8e;
+    border: 1px solid #c2c0ca;
+    font-style: normal;
+    font-size: 16px;
+    -webkit-appearance: none;
     -moz-appearance: none;
-        appearance: none;
-position: relative;
-display: inline-block;
-background: none;
+    appearance: none;
+    position: relative;
+    display: inline-block;
+    background: none;
 }
+
 input[type="text"]:focus,
 input[type="email"]:focus {
-border-color: #3ca9e2;
+    border-color: #3ca9e2;
 }
 input[type="text"]:focus:invalid,
 input[type="email"]:focus:invalid {
-color: #cc1e2b;
-border-color: #cc1e2b;
+    color: #cc1e2b;
+    border-color: #cc1e2b;
 }
 input[type="text"]:valid ~ .validation,
 input[type="email"]:valid ~ .validation {
-display: block;
-border-color: #0C0;
+    display: block;
+    border-color: #0C0;
 }
 input[type="text"]:valid ~ .validation span,
 input[type="email"]:valid ~ .validation span {
-background: #0C0;
-position: absolute;
-border-radius: 6px;
+    background: #0C0;
+    position: absolute;
+    border-radius: 6px;
 }
 input[type="text"]:valid ~ .validation span:first-child,
 input[type="email"]:valid ~ .validation span:first-child {
-top: 30px;
-left: 14px;
-width: 20px;
-height: 3px;
--webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+    top: 30px;
+    left: 14px;
+    width: 20px;
+    height: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 input[type="text"]:valid ~ .validation span:last-child,
 input[type="email"]:valid ~ .validation span:last-child {
-top: 35px;
-left: 8px;
-width: 11px;
-height: 3px;
--webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
+    top: 35px;
+    left: 8px;
+    width: 11px;
+    height: 3px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .validation {
-display: none;
-position: absolute;
-content: " ";
-height: 60px;
-width: 30px;
-right: 15px;
-top: 0px;
+    display: none;
+    position: absolute;
+    content: " ";
+    height: 60px;
+    width: 30px;
+    right: 15px;
+    top: 0;
 }
 
 input[type="submit"] {
-border: none;
-display: block;
-background-color: #f44336 ;
-color: #fff;
-font-weight: bold;
-text-transform: uppercase;
-cursor: pointer;
--webkit-transition: all 0.2s ease;
-transition: all 0.2s ease;
-font-size: 18px;
-position: relative;
-display: inline-block;
-cursor: pointer;
-text-align: center;
+    border: none;
+    background-color: #f44336 ;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 input[type="submit"]:hover {
-    background-color: #ff7f70; /* Even lighter shade of red for hover effect */
+    background-color: #ff7f70;
     color: white;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
 #create-account-wrap {
-background-color: #eeedf1;
-color: #8a8b8e;
-font-size: 14px;
-width: 100%;
-padding: 10px 0;
-border-radius: 0 0 4px 4px;
+    background-color: #eeedf1;
+    color: #8a8b8e;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0 0 4px 4px;
 }
 
-/* Add this to your global styles or component-specific styles */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(202, 31, 31); /* Transparent gray background */
-    z-index: 999; /* Ensure the overlay is on top of other elements */
+    background-color: rgb(202, 31, 31);
+    z-index: 999;
 }
 
-
-/* Add this to your component-specific CSS or global styles */
 .close-button {
     position: absolute;
     top: 10px;
@@ -177,15 +173,15 @@ border-radius: 0 0 4px 4px;
     background: none;
     border: none;
     font-size: 24px;
-    color: #000; /* Change the color as needed */
+    color: #000;
     cursor: pointer;
 }
 
 .close-button:focus {
-    outline: none; /* Remove the focus outline if needed */
+    outline: none;
 }
 
-.login-dialog-overlay {
+.register-dialog-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -196,17 +192,17 @@ border-radius: 0 0 4px 4px;
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
+}
 
-  .login-dialog {
+.register-dialog {
     background-color: #fff;
     width: 35%;
     text-align: center;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
-    position: relative; /* Add this to create a positioning context */
-  }
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+}
 
 .close-button {
     position: absolute;
@@ -214,26 +210,26 @@ border-radius: 0 0 4px 4px;
     right: 10px;
 }
 
-#login-form input[type="password"] {
-    border: 1px solid #c2c0ca; /* Add this to set a custom border style */
-    font-weight: normal; /* Remove bold font-weight */
+#signup-form input[type="password"] {
+    border: 1px solid #c2c0ca;
+    font-weight: normal;
 }
 
-#login-form input[type="text"],
-#login-form input[type="password"] {
-  width: 100%;
-  padding: 0 0 0 10px; /* Add padding to the left to create space */
-  margin: 0;
-  color: #8a8b8e;
-  border: 1px solid #c2c0ca;
-  font-style: normal;
-  font-size: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  display: inline-block;
-  background: none;
+#signup-form input[type="text"],
+#signup-form input[type="password"] {
+    width: 100%;
+    padding: 0 0 0 10px;
+    margin: 0;
+    color: #8a8b8e;
+    border: 1px solid #c2c0ca;
+    font-style: normal;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    display: inline-block;
+    background: none;
 }
 
 #signup-form input[type="text"],
@@ -254,7 +250,7 @@ border-radius: 0 0 4px 4px;
     position: relative;
     display: inline-block;
     background: none;
-    box-sizing: border-box; /* Add this to ensure the same box sizing as inputs */
+    box-sizing: border-box;
 }
 
 #signup-form input[type="password"]:focus,
@@ -319,7 +315,6 @@ border-radius: 0 0 4px 4px;
     transform: rotate(45deg);
 }
 
-/* Apply styles for the additional fields */
 #signup-form input[type="file"] {
     border: none;
     background: none;
@@ -334,22 +329,22 @@ border-radius: 0 0 4px 4px;
     border: 1px solid #c2c0ca;
     border-radius: 4px;
     margin-top: 10px;
-    font-size: 16px; /* Add this to set the font size */
-    color: #8a8b8e; /* Add this to set the text color */
+    font-size: 16px;
+    color: #8a8b8e;
 }
 
 #signup-form textarea:focus {
     border-color: #3ca9e2;
-    outline: none; /* Remove the default outline */
+    outline: none;
 }
 
 #signup-form textarea:focus:invalid {
     border-color: #cc1e2b;
-    outline: none; /* Remove the default outline */
+    outline: none;
 }
 
 .picture-container {
-    text-align: center; /* Center the contents horizontally */
+    text-align: center;
 }
 
 .picture-preview {
@@ -358,70 +353,68 @@ border-radius: 0 0 4px 4px;
     border-radius: 50%;
     background-color: #f0f0f0;
     overflow: hidden;
-    margin: 0 auto; /* Center the circle horizontally */
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Add position:relative for child elements */
+    position: relative;
 }
 
 .square-container {
     width: 100%;
     height: 100%;
-    background-color: #f0f0f0; /* Background color for bars */
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Hide overflowing content */
+    overflow: hidden;
 }
 
 .square-container img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Maintain the aspect ratio and add bars */
+    object-fit: contain
 }
 
-/* Modify the Choose File label button */
 .file-upload-label {
-  width: 30px; /* Set a fixed width for the label (adjust as needed) */
-  height: 30px; /* Set a fixed height for the label (adjust as needed) */
-  background-color: #f44336; /* Background color for the button */
-  color: #fff; /* Text color for the button */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Add a pointer cursor */
-  transition: background-color 0.2s ease; /* Smooth transition on hover */
-  display: inline-block; /* Make the label inline-block to fit content */
-  margin-top: 10px; /* Add space between button and preview */
-  margin-right: 2px; /* Add space between button and delete button */
-  margin-bottom: 1px;
-  text-align: center; /* Center the icon horizontally */
-  line-height: 30px; /* Center the icon vertically */
-  font-size: 16px; /* Adjust font size as needed */
+    width: 30px;
+    height: 30px;
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 2px;
+    margin-bottom: 1px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
 }
 
 .file-upload-label:hover {
-    background-color: #ff7f70; /* Change background color on hover */
+    background-color: #ff7f70;
 }
 
-/* Style for the delete button label */
 .delete-button-label {
-    width: 30px; /* Set a fixed width for the label (adjust as needed) */
-    height: 30px; /* Set a fixed height for the label (adjust as needed) */
-    background-color: #f44336; /* Background color for the button */
-    color: #fff; /* Text color for the button */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Add a pointer cursor */
-    transition: background-color 0.2s ease; /* Smooth transition on hover */
-    display: inline-flex; /* Use flex to center the icon vertically and horizontally */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    margin-top: 10px; /* Add space between button and preview */
-    margin-right: 10px; /* Add space between button and upload button */
-    font-size: 16px; /* Adjust font size as needed */
+    width: 30px;
+    height: 30px;
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
 }
 
 .delete-button-label:hover {
-    background-color: #ff7f70; /* Change background color on hover */
+    background-color: #ff7f70;
 }
 
 .login-link {

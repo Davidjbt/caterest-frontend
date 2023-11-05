@@ -47,4 +47,5 @@ export class ApiService {
   getMatchingUsers(query: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/user/find?query=${query}`);
   }
+
 }

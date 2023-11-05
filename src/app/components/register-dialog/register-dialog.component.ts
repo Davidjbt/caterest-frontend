@@ -3,6 +3,7 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {UserRegisterDto} from '../../interface/user-register-dto';
 import {AuthService} from "../../services/auth.service";
 import {LoginDialogComponent} from "../login-dialog/login-dialog.component";
+import {faTrashCan, faUpload} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register-dialog',
@@ -11,15 +12,16 @@ import {LoginDialogComponent} from "../login-dialog/login-dialog.component";
 })
 export class RegisterDialogComponent {
 
+  faUpload = faUpload;
+  faTrash = faTrashCan;
+  selectedProfilePicture: File | null = null;
+  confirmPassword: String = '';
   userRegisterDto: UserRegisterDto = {
     username: '',
     email: '',
     password: '',
     biography: ''
   }
-
-  selectedProfilePicture: File | null = null;
-  confirmPassword: String = '';
 
   constructor(
     private dialogRef: MatDialogRef<RegisterDialogComponent>,

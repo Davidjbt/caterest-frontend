@@ -94,7 +94,7 @@ export class AuthService {
 
   private checkTokenExpiration() {
     const expirationCookie = this.cookieService.get('token-expiration');
-    console.log('Checking');
+     // console.log('Checking+', expirationCookie, '+');
     if (expirationCookie) {
       const expirationTime = Number(expirationCookie);
       const currentTime = Date.now();

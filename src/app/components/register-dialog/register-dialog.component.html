@@ -1,5 +1,5 @@
-<div class="login-dialog-overlay">
-    <div class="login-dialog">
+<div class="register-dialog-overlay">
+    <div class="register-dialog">
         <h2>Register</h2>
         <button mat-icon-button class="close-button" (click)="closeDialog()">
             <mat-icon aria-label="Close">close</mat-icon>
@@ -24,15 +24,13 @@
                     <img [src]="profilePicture" alt="Profile Picture">
                   </div>
                 </div>
-                <!-- Hide the original input element -->
                 <input type="file" id="picture" name="picture" accept="image/*" (change)="onPictureChange($event)" style="display: none;">
-                <!-- Use a label for the custom "Choose File" button with only the pencil icon -->
                 <label for="picture" class="file-upload-label">
-                  <i class="fa fa-pencil"></i>
+                  <fa-icon [icon]="faUpload"></fa-icon>
                 </label>
 
                 <label for="delete-picture" class="delete-button-label" (click)="onDeletePicture()">
-                    <i class="fa fa-trash"></i>
+                    <fa-icon [icon]="faTrash" ></fa-icon>
                 </label>
             </div>
 
