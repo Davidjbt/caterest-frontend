@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
 import {ApiService} from "../../services/api.service";
 import {PicturePostDto} from "../../interface/picture-post-dto";
+import {faTrashCan, faUpload} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-post-picture-dialog',
@@ -12,6 +13,8 @@ export class PostPictureDialogComponent {
 
   picturePostDto: PicturePostDto = { description: ''};
   selectedPicture: File | null = null;
+  faUpload = faUpload;
+  faTrash = faTrashCan;
 
   constructor(
     private dialogRef: MatDialogRef<PostPictureDialogComponent>,
