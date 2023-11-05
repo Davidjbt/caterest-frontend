@@ -1,6 +1,17 @@
 <div *ngIf="results.length > 0" class="result-list">
   <div *ngFor="let result of results" class="result-container">
-    <a [routerLink]="['', result.displayName]"><img [src]="'http://localhost:8080/user/' + result.id + '/profilePicture'" alt="" class="result-image"></a>
-    <div class="result-username">{{ result.displayName }}</div>
+    <a [routerLink]="['', result.displayName]">
+      <img [src]="'http://localhost:8080/user/' + result.id + '/profilePicture'" alt="" class="result-image">
+    </a>
+    <div class="user-info">
+      <a [routerLink]="['', result.displayName]">
+        <div class="result-username">{{result.displayName}}</div>
+      </a>
+      <div class="result-biography">{{result.biography}}</div>
+    </div>
+    <div class="post-count">
+      <span>Posts</span>
+      {{result.pictures.length}}
+    </div>
   </div>
 </div>

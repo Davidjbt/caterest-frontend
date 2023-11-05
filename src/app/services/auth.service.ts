@@ -65,7 +65,7 @@ export class AuthService {
       formData.append('inpFile', profilePicture);
     console.log(formData);
 
-    return this.http.post<any>(`${this.apiUrl}/register`, formData)
+    return this.http.post<any>(`${this.apiUrl}/register`, formData, {withCredentials: true})
       .pipe(
         tap(response => {
           this.loggedInSubject.next(response);
@@ -81,7 +81,7 @@ export class AuthService {
     this.cookieService.delete('token-expiration');
     clearInterval(this.checkTokenExpirationInterval);
     sessionStorage.removeItem('user');
-    return this.http.post<any>(`${this.apiUrl}/logOut`, null, {withCredentials: true,})
+    return this.http.post<any>(`${this.apiUrl}/logOut`, null, {withCredentials: true})
   }
 
   logOutBySessionExpired() {

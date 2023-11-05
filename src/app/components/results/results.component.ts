@@ -33,5 +33,4 @@ export class ResultsComponent {
     })
   }
 
-  protected readonly length = length;
 }
