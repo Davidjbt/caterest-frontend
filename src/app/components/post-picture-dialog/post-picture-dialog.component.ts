@@ -23,18 +23,18 @@ export class PostPictureDialogComponent {
 
   postPicture(): void {
     this.apiService.postPicture(this.picturePostDto, this.selectedPicture).subscribe(
-      (response) => {
-        // Handle successful response
-        console.log('Response:', response);
-      },
-      (error) => {
-        // Handle error
-        console.error('Error:', error);
+      {
+        next: response => {
+          console.log(response)
+          window.location.reload();
+        },
+        error: err => {
+          console.log('error', err);
+        }
       }
     );
-    console.log('call made')
-    this.closeDialog()
-    window.location.reload();
+
+    this.closeDialog();
   }
 
   picture: string = '../../assets/images/picture-placeholder.png';

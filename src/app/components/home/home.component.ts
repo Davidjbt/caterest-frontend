@@ -16,6 +16,6 @@ export class HomeComponent implements OnInit{
       this.picturesId = data;
       console.log(data)
     })
-
   }
+
 }

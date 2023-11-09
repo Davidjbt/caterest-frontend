@@ -25,7 +25,7 @@ export class ApiService {
     return this.http.get<any>(`${this.apiUrl}/user/profile/` + displayName);
   }
 
-  postPicture(picturePostDto: PicturePostDto, pictureImage: File | null) {
+  postPicture(picturePostDto: PicturePostDto, pictureImage: File | null): Observable<any> {
     const formData = new FormData();
 
     const picturePart = new Blob([JSON.stringify(picturePostDto)], {
@@ -38,7 +38,7 @@ export class ApiService {
     }
 
     const options = {
-      withCredentials: true, // Include cookies in the request
+      withCredentials: true
     };
 
     return this.http.post<any>(`${this.apiUrl}/picture/post`, formData, options);
