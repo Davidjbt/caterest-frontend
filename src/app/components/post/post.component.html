@@ -1,4 +1,4 @@
-<section class="picture">
+<section class="picture" *ngIf="postDetails">
     <section class="picture-header">
         <a [routerLink]="['', postDetails.user.displayName]"><img [src]="'http://localhost:8080/user/' + postDetails.user.id + '/profilePicture'"></a>
         <div>
