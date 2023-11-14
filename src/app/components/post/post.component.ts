@@ -9,7 +9,7 @@ import {ApiService} from '../../services/api.service';
 })
 export class PostComponent implements OnInit {
 
-  pictureId: String | null = '';
+  pictureId: string | null = '';
   postDetails: any | null = null;
 
   constructor(
@@ -25,5 +25,11 @@ export class PostComponent implements OnInit {
         (data) => { this.postDetails = data; }
       );
   }
+
+  // formatDate(dateString: string | null): string | null {
+  //   if (!dateString) return '';
+  //   const date = new Date(dateString);
+  //   return this.datePipe.transform(date, 'd MMM yyyy');
+  // }
 
 }

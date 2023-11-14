@@ -1,0 +1,7 @@
+.picture-info {
+  display: flex;
+}
+
+.picture-info .picture-description {
+  width: 80%;
+}

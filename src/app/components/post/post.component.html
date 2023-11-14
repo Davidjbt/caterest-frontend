@@ -1,40 +1,15 @@
-<section class="picture" *ngIf="postDetails">
-    <section class="picture-header">
+<div class="picture" *ngIf="postDetails">
+    <div class="picture-header">
         <a [routerLink]="['', postDetails.user.displayName]"><img [src]="'http://localhost:8080/user/' + postDetails.user.id + '/profilePicture'"></a>
         <div>
             <p id="picture-username" [textContent]="postDetails.user.displayName"></p>
         </div>
-    </section>
-    <section class="picture-image">
+    </div>
+    <div class="picture-image">
         <img [src]="'http://localhost:8080/picture/render/' + pictureId">
-    </section>
-    <section class="picture-description">
-        <p [textContent]="postDetails.description"></p>
-    </section>
-<!--    <section class="picture-comments">-->
-<!--        <hr>-->
-<!--        <div th:if="${picture.comments.size() > 0}"-->
-<!--             th:each="i: ${#numbers.sequence(picture.comments.size() - 1, 0)}" class="comment">-->
-<!--            <a th:href="@{'/user/' + ${picture.comments.get(i).user.id}}"><img th:src="@{'/user/' + ${picture.comments.get(i).user.id} + '/profilePicture'}"></a>-->
-<!--            <a th:href="@{'/user/' + ${picture.comments.get(i).user.id}}"><b th:text="${picture.comments.get(i).user.displayName}"></b></a>-->
-<!--            <p th:text="${picture.comments.get(i).commentText}"></p>-->
-<!--        </div>-->
-<!--        <div th:unless="${picture.comments.size() > 0}" class="no-comments">No comments yet</div>-->
-<!--        <button id="btn-comment">Toggle form visibility</button>-->
-<!--        <form id="form-comment" th:object="${comment}" th:action="@{'/comment/' + ${picture.id}}"  method="post">-->
-<!--            <div>-->
-<!--                <label for="username"><b>Username</b></label>-->
-<!--                <input id="username" type="text" th:field="*{user.displayName}">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <label for="password"><b>Password</b></label>-->
-<!--                <input id="password" type="password" th:field="*{user.password}">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <label for="commentText" ><b>Comment</b></label>-->
-<!--                <input id="commentText" type="text" th:field="*{commentText}">-->
-<!--            </div>-->
-<!--            <input type="Submit">-->
-<!--        </form>-->
-<!--    </section>-->
-</section>
+    </div>
+    <div class="picture-info">
+        <div class="picture-description"><p [textContent]="postDetails.description"></p></div>
+        <div class="picture-post-date"><p [textContent]="postDetails.postOfDate | date: 'dd/MM/yyyy'"></p></div>
+    </div>
+</div>
